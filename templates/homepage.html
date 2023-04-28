@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thyme Machine Mindblowing Predictor of Viewing Delights</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+
+<body>
+  <h1>Hello and welcome to the Thyme Machine recommender!</h1>
+
+  <img src= "{{url_for('static', filename='movie_night.jpeg')}}", width= 600> 
+
+  <form action="/recommendations">
+    <p> Please rate one of the following movies on a scale from 1 (very bad) to 5 (very nice)</p>
+    Star wars: <input type = 'text' name = "Star_wars" placeholder ="0 -5" <br>
+    Titanic: <input type = 'text' name = "Titanic" placeholder ="0 -5" <br>
+    <input type = submit >
+
+  </form>
+
+    <p style="color: brown; font-size: 24px;"> This is just filler, look at the pretty colors</p>
+
+    <p> To see the recommendations click <a href = "/recommendations" >here</a></p>
+    <b>
+      <button class="custom-button">Click Me, I Do Nothing</button>
+    </b>
+</body>
+
+</html>
