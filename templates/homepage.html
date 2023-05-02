@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thyme Machine Mindblowing Predictor of Viewing Delights</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
-</head>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Welcome to Thyme Machine Recommender</h1>
+    </header>
 
-<body>
-  <h1>Hello and welcome to the Thyme Machine recommender!</h1>
-
-  <img src= "{{url_for('static', filename='movie_night.jpeg')}}", width= 600> 
-
-  <form action="/recommendations">
-    <p> Please rate one of the following movies on a scale from 1 (very bad) to 5 (very nice)</p>
-    Star wars: <input type = 'text' name = "Star_wars" placeholder ="0 -5" <br>
-    Titanic: <input type = 'text' name = "Titanic" placeholder ="0 -5" <br>
-    <input type = submit >
-
-  </form>
-
-    <p style="color: brown; font-size: 24px;"> This is just filler, look at the pretty colors</p>
-
-    <p> To see the recommendations click <a href = "/recommendations" >here</a></p>
-    <b>
-      <button class="custom-button">Click Me, I Do Nothing</button>
-    </b>
-</body>
-
-</html>
+    <section class="main">
+      <img src="{{url_for('static', filename='movie_night.jpeg')}}" alt="Movie Night" class="main__image" />
+    
+      <form action="/recommendations" class="main__form">
+        <h2 class="main__form-heading">Rate the following movies</h2>
+    
+        <div class="main__form-movies">
+          <div class="main__form-movie">
+            <label for="star-wars" class="main__form-movie-label">Star Wars:</label>
+            <input type="number" id="star-wars" name="Star_wars" placeholder="1-5" class="main__form-movie-input" min="1" max="5" />
+          </div>
+    
+          <div class="main__form-movie">
+            <label for="titanic" class="main__form-movie-label">Titanic:</label>
+            <input type="number" id="titanic" name="Titanic" placeholder="1-5" class="main__form-movie-input" min="1" max="5" />
+          </div>
+        </div>
+    
+        <button type="submit" class="main__form-submit">Get Recommendations</button>
+      </form>
+    
+      <div class="main__filler">
+        <p class="main__filler-text">This is just filler, look at the pretty colors</p>
+      </div>
+    </section>
+    
+    <footer class="footer">
+      <p class="footer__text">Want more recommendations?</p>
+      <a href="/recommendations" class="footer__link">Click Here</a>
+    
+      <button class="footer__button">Click Me, I Do Nothing</button>
+    </footer>
+    

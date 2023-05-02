@@ -1,33 +1,52 @@
-.custom-button {
-    background-color: lightslategrey;
-    border: green;
-    border-radius: 10px;
-    text-align: justify;
-    cursor: crosshair;
-}
+/* Global Styles */
 
-p {
-    color: cornflowerblue;
+{
+    box-sizing: border-box;
+    }
+    html {
     font-size: 16px;
-}
-
-body {
-    font-family: Arial, san-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    background-color: burlywood;
-}
-
-a {
-    color: firebrick;
-}
-
-a:hover {
-    color: purple;
-}
-
-img {
-    width: 540px;
-    height: auto;
-    border-radius: 20px;
-}
+    }
+    
+    body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+    }
+    
+    /* Header Styles */
+    .header {
+    background-color: #ffd700;
+    padding: 16px;
+    }
+    
+    .header__title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    }
+    
+    /* Main Section Styles */
+    .main {
+    padding: 32px;
+    }
+    
+    .main__image {
+    display: block;
+    margin: 0 auto 32px auto;
+    max-width: 100%;
+    border-radius: 16px;
+    }
+    
+    .main__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .main__form
