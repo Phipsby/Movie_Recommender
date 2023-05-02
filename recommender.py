@@ -1,8 +1,11 @@
 # in this file we have the code for the recommenders
 
 import random
+import csv
 
-MOVIE_LIST= ['Prison break','Titanic','Money Heist','In the mood for love']
+with open('movies.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    MOVIE_LIST = [movie[1] for movie in reader]
 
 def random_recommender():
     ## describe the function!!!
