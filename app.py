@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from recommender import random_recommender
+from recommender import random_recommender, popular_recommender
 
 app= Flask(__name__)
 
@@ -12,7 +12,8 @@ def recommendations():
     form= request.args
     form_data=dict(form)
     results=random_recommender()
-    return render_template("recommendations.html", movies=results, votes=form)
+    results_popular=popular_recommender()
+    return render_template("recommendations.html", movies=results, results_popular=results_popular, votes=form)
 
 
 if __name__ == '__main__':
